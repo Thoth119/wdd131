@@ -5,12 +5,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: #fff;
+    color: #000;
 }
 
 header {
     margin: 20px 0;
 }
 
+  
 header h1 {
     font-size: 28px;
     letter-spacing: 2px;
@@ -23,6 +26,15 @@ header h2 {
     color: #006EB6;
     margin-bottom: 20px;
 }
+
+.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark h2 {
+    color: #66bfff;
+  }
 
 main {
     max-width: 600px;
