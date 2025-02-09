@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A blog for reviewing children's books">
+    <meta name="author" content="Jacob Martin">
+    <title>Kids Read For Fun</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="blog.js" defer></script>
+</head>
+<body>
+    <div class="skiptocontent">
+        <a href="#maincontent">Skip to main content</a>
+    </div>
+    <header>
+        <h1>Kids Read For Fun</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="maincontent">
+        <section id="articles-container">
+        </section>
+        <aside class="filters">
+            <p>Filter form will go here</p>
+        </aside>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const articlesContainer = document.getElementById("articles-container");
+            articles.forEach(article => {
+                const articleElement = document.createElement("article");
+
+                articleElement.innerHTML = `
+                    <header>
+                        <h2>${article.title}</h2>
+                        <time datetime="${new Date(article.date).toISOString()}">${article.date}</time>
+                    </header>
+                    <p>${article.description}</p>
+                    <figure>
+                        <img src="${article.imgSrc}" alt="${article.imgAlt}">
+                    </figure>
+                    <p><strong>Recommended Ages:</strong> ${article.ages}</p>
+                    <p><strong>Genre:</strong> ${article.genre}</p>
+                    <p><strong>Rating:</strong> ${article.stars}</p>
+                `;
+
+                articlesContainer.appendChild(articleElement);
+            });
+        });
+    </script>
+</body>
+</html>
