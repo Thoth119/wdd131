@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+.credit-card-form {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-container {
+    position: relative;
+    width: 390px;
+    height: 500px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background: #ffffff;
+    z-index: 2;
+    display: grid;
+    grid-template-areas: 
+        "logo number"
+        "name name"
+        "exp exp";
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.card-front .card-image {
+    grid-area: logo;
+}
+
+.card-front label:nth-child(2) { grid-area: number; }
+.card-front label:nth-child(3) { grid-area: name; }
+.card-front label:nth-child(4) { grid-area: exp; }
+
+.card-back {
+    background: #e0e0e0;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.magnetic-strip {
+    background: #333;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.card-back label {
+    align-self: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    color: #333;
+}
+
+input {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    justify-self: center;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+input:invalid {
+    border-color: #ff4444;
+}
+
+input:valid {
+    border-color: #28a745;
+}
