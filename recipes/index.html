@@ -21,44 +21,11 @@
     </header>
     <main>
         <form class="search-form">
-            <input type="text" placeholder="Search recipes..." aria-label="Search recipes">
-            <button type="submit">Search</button>
+            <input type="text" id="search-input" placeholder="Search recipes..." aria-label="Search recipes">
+            <button type="submit" id="search-button">Search</button>
         </form>
-        <section class="recipe">
-            <h2>Sweet Potato Waffles</h2>
-            <img src="images/sweet-potato-waffle-md.jpg" alt="Sweet Potato Waffles">
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-            <p class="time-yield">Prep Time: 30 Min | Cook Time: 30 Min | Yield: 6 waffles</p>
-            <p class="description">Savory waffles made with Sweet potato with a hint of Ginger</p>
-            <h3>Ingredients</h3>
-            <ul class="ingredients">
-                <li>2 separated eggs</li>
-                <li>1/4 C Oil</li>
-                <li>1/4 tsp salt</li>
-                <li>1/4 tsp Cayenne pepper</li>
-                <li>3/4 C milk</li>
-                <li>1 Tbsp Brown Sugar</li>
-                <li>2 tsp Shredded Ginger</li>
-                <li>3/4 C Mashed Sweet Potatoes</li>
-                <li>1 Tbsp Minced Shallots</li>
-                <li>1 Tbsp Baking Powder</li>
-                <li>1 Tbsp Chives</li>
-                <li>1/4 C Cornmeal</li>
-                <li>1 C Flour</li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol class="instructions">
-                <li>Add the egg yolks, oil, salt, cayenne, sugar, ginger, shallots, sweet potatoes (steam and mash before), and milk and mix well.</li>
-                <li>Next add the cornmeal, chives, and flour and baking powder</li>
-                <li>Whip the egg whites until stiff and fold in</li>
-                <li>Cook until golden brown in a waffle iron. Serve with butter and Wilted Greens or Honey.</li>
-            </ol>
+        <section class="recipes-container">
+            <!-- Recipes dynamically inserted here -->
         </section>
     </main>
     <footer>
@@ -73,7 +40,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
-<!--I'm actually curious how tasty these recipes are, maybe I'll try one out-->
+<!--Gonna try out the waffles, wish me luck!-->
