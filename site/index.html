@@ -1,36 +1,87 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Plan(s)</title>
-    <link rel="stylesheet" href="site-plan.css">
+    <title>MTG Curve Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="magicFavicon.png">
+    <script src="manaMap.js"></script>
+    <script src="mtgCalculate.js"></script>
+    <script src="mtgDOM.js"></script>
 </head>
 <body>
     <header>
-        <h1>Site Plans</h1>
+        <h1>MTG Curve Calculator</h1>
+        <nav>
+            <img src="images/mtg-logo.png" alt="Magic: The Gathering Logo" id="mtg-logo">
+            <a href="index.html">Home</a>
+            <a href="how-to-use.html">How to Use</a>
+        </nav>
     </header>
-    
     <main>
-        <section>
-            <h2>Ideas</h2>
-            <p>So, currently my main idea is to make an AI using
-                x.api on the backend. The plan is a chill LDS bot that helps with planning and is fun to chat with.
-                If this idea currently doesn't aline with our stance on AI(as I have not fully read up on the talks/church opinion),
-                I will happily consider my second idea, which is a MTG curve calculator. Currently,
-                 the site I use has excellent calculations but is missing visualization and a more concrete breakdown of the
-                 metrics. Either way, both of these projects are gonna take a lot of time, so please inform me ASAP what you think.
-                Either way, this is gonna focus more on the back-end and less on aestetic. Which I know, the whole point of this class
-            is based around presentation, I've always been more function over flavor though.</p>
-
-                 <p>- Jacob Martin</p>
+        <section id="intro">
+            <p>Build your Magic: The Gathering deck and analyze its mana curve, land distribution, and draw probabilities with this interactive tool!</p>
         </section>
+        <div class="container">
+            <aside id="stats">
+                <h2>Deck Stats & Hand</h2>
+                <p>Future Project</p>
+                <div id="results"></div>
+            </aside> <!--for future update(personal project)-->
+            <section id="card-deck">
+                <div class="card-input">
+                    <select class="type-select" id="card-type">
+                        <option value="spell">Spell</option>
+                        <option value="land">Land</option>
+                    </select>
+                    <button class="mana-button" id="white" title="White" aria-label="White Mana"></button>
+                    <button class="mana-button" id="blue" title="Blue" aria-label="Blue Mana"></button>
+                    <button class="mana-button" id="black" title="Black" aria-label="Black Mana"></button>
+                    <button class="mana-button" id="red" title="Red" aria-label="Red Mana"></button>
+                    <button class="mana-button" id="green" title="Green" aria-label="Green Mana"></button>
+                    <button class="mana-button" id="colorless" title="Colorless" aria-label="Colorless Mana"></button>
+                    <button class="mana-button" id="any" title="Any" aria-label="Any Mana"></button>
+                    <div id="any-input-container">
+                        <input type="number" id="any-cost" min="1" max="15" placeholder="1-15" aria-label="Mana Cost">
+                        <button id="any-confirm">Add</button>
+                    </div>
+                </div>
+                <div id="card-creator">
+                    <h2>Create Card</h2>
+                    <div id="mana-slots"></div>
+                    <div id="tap-option">
+                        <label><input type="checkbox" id="tap-check"> Enters Tapped</label>
+                    </div>
+                    <div>
+                        <label>Amount to add: <input type="number" id="amount-to-add" min="1" value="1" aria-label="Amount to Add"></label>
+                        <button id="add-to-deck">Add to Deck</button>
+                    </div>
+                </div>
+                <div id="deck-list">
+                    <h2>Deck List</h2>
+                    <button id="clear-deck">Clear Deck</button>
+                    <button id="calculate">Calculate</button>
+                    <select class="play-select" id="playOrDraw">
+                        <option value="onThePlay">On the Play</option>
+                        <option value="onTheDraw">On the Draw</option>
+                    </select>
+                    <div id="deck-display"></div>
+                </div>
+            </section>
+            <aside id="curve">
+                <h2>Mana Curve</h2>
+                <p>Future Project</p>
+                <div id="curve-chart"></div>
+                <!--for future update(personal project)-->
+            </aside>
+        </div>
     </main>
-    
     <footer>
         <p>&copy; 2025 Jacob Martin</p>
     </footer>
 </body>
 </html>
+<!--Credit to https://commons.wikimedia.org/wiki/ for most png files-->
+<!--idea inspired by https://mtgoncurve.com/-->
+    
