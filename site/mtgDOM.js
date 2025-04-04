@@ -1,4 +1,4 @@
-//Main DOM handling and rendering
+//Main DOM handling and input/output logic
 
 class MTGDeckManager {
 
@@ -120,7 +120,7 @@ class MTGDeckManager {
         return manaArray.map((mana, index) => {
             const symbol = mana.color === 'any' ? `A${mana.cost === 1 ? '' : mana.cost}` : manaMap[mana.color];
             return `
-                <div class="mana-slot" style="background-image: url('images/${symbol}.png'); width: 20px; height: 20px; display: inline-block; margin: 0 2px;">
+                <div class="mana-slot" style="background-image: url('images/${symbol}.webp'); width: 40px; height: 40px; display: inline-block; margin: 0 2px;">
                     ${includeRemoveButton ? `<button class="remove-mana" onclick="deckManager.currentMana.splice(${index}, 1); deckManager.updateManaSlots();">X</button>` : ''}
                 </div>`;
         }).join('');

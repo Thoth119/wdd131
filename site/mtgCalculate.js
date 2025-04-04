@@ -101,7 +101,7 @@ function calculateSpells(spellList, landList, onTheOption) {
 
 //function tapLogic(landList)
     //probably gonna save this for the future, still gotta get dual costs calculating properly.
-
+//this is just for me personally
 //Pros of my website, cons compared to oncurve, and the ideas for the site's future.
 //Let's start with the pros::
 //#1 No external card names necessary

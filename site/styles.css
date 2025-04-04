@@ -108,13 +108,13 @@ h2 {
     opacity: 0.8;
 }
 
-#white { background-image: url('images/W.png'); }
-#blue { background-image: url('images/U.png'); }
-#black { background-image: url('images/B.png'); }
-#red { background-image: url('images/R.png'); }
-#green { background-image: url('images/G.png'); }
-#colorless { background-image: url('images/C.png'); }
-#any { background-image: url('images/A.png'); }
+#white { background-image: url('images/W.webp'); }
+#blue { background-image: url('images/U.webp'); }
+#black { background-image: url('images/B.webp'); }
+#red { background-image: url('images/R.webp'); }
+#green { background-image: url('images/G.webp'); }
+#colorless { background-image: url('images/C.webp'); }
+#any { background-image: url('images/A.webp'); }
 
 #any-input-container {
     display: none;

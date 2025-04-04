@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTG Curve Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="magicFavicon.png">
+    <link rel="icon" type="image/png" href="mtgFavicon.png">
     <script src="manaMap.js"></script>
     <script src="mtgCalculate.js"></script>
     <script src="mtgDOM.js"></script>
@@ -14,9 +14,10 @@
     <header>
         <h1>MTG Curve Calculator</h1>
         <nav>
-            <img src="images/mtg-logo.png" alt="Magic: The Gathering Logo" id="mtg-logo">
+            <img src="images/mtg-logo.webp" alt="Magic: The Gathering Logo" id="mtg-logo">
             <a href="index.html">Home</a>
             <a href="how-to-use.html">How to Use</a>
+            <a href="site-plans.html">Easy Grading</a>
         </nav>
     </header>
     <main>
@@ -31,10 +32,10 @@
             </aside> <!--for future update(personal project)-->
             <section id="card-deck">
                 <div class="card-input">
-                    <select class="type-select" id="card-type">
+                    <label><select class="type-select" id="card-type"><!--wrapping select elements-->
                         <option value="spell">Spell</option>
                         <option value="land">Land</option>
-                    </select>
+                    </select></label>
                     <button class="mana-button" id="white" title="White" aria-label="White Mana"></button>
                     <button class="mana-button" id="blue" title="Blue" aria-label="Blue Mana"></button>
                     <button class="mana-button" id="black" title="Black" aria-label="Black Mana"></button>
@@ -62,10 +63,10 @@
                     <h2>Deck List</h2>
                     <button id="clear-deck">Clear Deck</button>
                     <button id="calculate">Calculate</button>
-                    <select class="play-select" id="playOrDraw">
+                    <label><select class="play-select" id="playOrDraw">
                         <option value="onThePlay">On the Play</option>
                         <option value="onTheDraw">On the Draw</option>
-                    </select>
+                    </select></label>
                     <div id="deck-display"></div>
                 </div>
             </section>
