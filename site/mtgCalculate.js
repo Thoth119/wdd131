@@ -7,8 +7,6 @@ function getRandomHand(deckList, count) {
 }
 
 function pickOptimalLands(lands, spellMana, spellTurn) {
-    // This system isn't the most refined and often leads to dual mana cards ie: GB or WW being far off, but I'm happy with the system as is.
-    //Will have to refine at a latter time.
     //I know it's overcomplicated, will try and get dual lands/ dual mana spells working in the future(might take me too long for project)
     const requiredColors = spellMana
         .filter(m => m.color !== 'any')
@@ -17,6 +15,8 @@ function pickOptimalLands(lands, spellMana, spellTurn) {
         land,
         score: land.mana.reduce((score, m) => 
             requiredColors.includes(manaMap[m.color]) ? score + 1 : score, 0)
+    //will wrap this in a forEach statement on my own time, if statement just for reminder/pseudo code for dual land
+    //if(!(lands in spellMana))&&(!(lands in manaMap )):
     }));
     return scoredLands
         .sort((a, b) => b.score - a.score)
@@ -75,7 +75,7 @@ function checkManaRequirements(landsInPlay, spellMana) {
     return anyManaLeft >= required.total;
 }
 function cardPlayability(spell, deckList, onTheOption) {//onTheOption to determine if you get an extra card, which improves some probabilities.
-    const trials = 5; //Monte Carlo-esque system
+    const trials = 1000; //Monte Carlo-esque system
     let playable = 0;
     const spellTurn = spell.cost;
 
@@ -98,6 +98,12 @@ function calculateSpells(spellList, landList, onTheOption) {
         spell.calculated = cardPlayability(spell, deckList, onTheOption);
     });
 }
+
+//Known issues::
+//dual lands counting as any mana
+//dual cost spells not calculating perfectly
+
+
 
 //function tapLogic(landList)
     //probably gonna save this for the future, still gotta get dual costs calculating properly.
