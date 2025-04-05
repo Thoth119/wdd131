@@ -117,7 +117,9 @@ function calculateSpells(spellList, landList, onTheOption) {
 //Cons::
 //#1 No direct import/ card database
 //#2 Lacking general data
-//#3
+//#3 dual system not in place
 
-//Requirements met::
-//
+//future plans::
+//card database
+//tap logic
+//general info
